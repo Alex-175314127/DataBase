@@ -18,10 +18,10 @@ public class testDepartment1 {
         for (int i = 0; i < d.getListEmployee().size(); i++) {
             System.out.println(d.getListEmployee().get(i).toString());
         }
-         Department d1 = new Department(20,"Administration");
-        d1.readEmployees();
-        for (int i = 0; i < d1.getListEmployee().size(); i++) {
-            System.out.println(d1.getListEmployee().get(i).toString());
-    }
+//         Department d1 = new Department(20,"Marketing");
+//        d1.readEmployees();
+//        for (int i = 0; i < d1.getListEmployee().size(); i++) {
+//            System.out.println(d1.getListEmployee().get(i).toString());
+//    }
     }
 }

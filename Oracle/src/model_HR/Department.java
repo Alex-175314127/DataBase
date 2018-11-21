@@ -5,7 +5,14 @@
  */
 package model_HR;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import util.MyOracle;
 
 /**
  *
@@ -34,7 +41,20 @@ public class Department {
     }
 
     public void readEmployees(){
-        
+        try {
+            MyOracle ora = new MyOracle("172.23.9.185", "1521", "orcl", "MHS175314127", "MHS175314127");
+            Connection con = ora.getConnection();           
+            Statement stmt = con.createStatement();           
+            String query = "select first_name,last_name from Employees where department_id="+department_ID;
+            ResultSet rs = stmt.executeQuery(query);
+            while (rs.next()) {
+                Employee em = new Employee(rs.getString(1),rs.getString(2));
+                listEmployee.add(em);
+            }
+            con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(Department.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     public int getDepartment_ID() {
         return department_ID;
