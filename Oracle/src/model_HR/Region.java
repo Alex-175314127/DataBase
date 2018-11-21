@@ -9,14 +9,14 @@ package model_HR;
  *
  * @author admin
  */
-public class Regions {
+public class Region {
     private int region_id;
     private String region_name;
 
-    public Regions() {
+    public Region() {
     }
 
-    public Regions(int region_id, String region_name) {
+    public Region(int region_id, String region_name) {
         this.region_id = region_id;
         this.region_name = region_name;
     }

@@ -25,11 +25,11 @@ public class TestOracle1 {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             //step2 create  the connection object
             Connection con = DriverManager.getConnection(
-                    "jdbc:oracle:thin:@172.23.9.185:1521:orcl", "puspa", "puspa");
+                    "jdbc:oracle:thin:@172.23.9.185:1521:orcl", "MHS175314127", "MHS175314127");
             //step3 create the statement object
             Statement stmt = con.createStatement();
             //step4 execute query
-            ResultSet rs = stmt.executeQuery("select E.first_name, E.last_name from puspa.employees E" );
+            ResultSet rs = stmt.executeQuery("select E.first_name, E.last_name from MHS175314127.employees E" );
             while (rs.next()) {
                 System.out.println( rs.getString(1) + "  " + rs.getString(2));
             }
