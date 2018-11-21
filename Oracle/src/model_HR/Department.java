@@ -17,6 +17,14 @@ public class Department {
     
     private ArrayList<Employee> listEmployee = new ArrayList<Employee>();
 
+    public ArrayList<Employee> getListEmployee() {
+        return listEmployee;
+    }
+
+    public void setListEmployee(ArrayList<Employee> listEmployee) {
+        this.listEmployee = listEmployee;
+    }
+
     public Department(int department_ID, String department_name) {
         this.department_ID = department_ID;
         this.department_name = department_name;
