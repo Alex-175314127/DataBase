@@ -67,13 +67,14 @@ public class MyDokterDialog extends JDialog {
         tombolPanel.add(simpanButton);
         add(tombolPanel,BorderLayout.NORTH);
         // set visible
-        setVisible(true);
+
         simpanButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 rs.simpanDataDokter();
             }
         });
+        setVisible(true);
     }
     /**
      * Fungsi untuk memanggil dialog tambah Dokter
